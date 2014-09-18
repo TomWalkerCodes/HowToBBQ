@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6c0cb112-e2fc-4493-88be-63343218b805</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HowToBBQ</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BBQReciepe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BBQReceipesViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\BBQPulledPorkSandwiches.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\BBQTurkeyDrumstickswithChipotleGlaze.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\BBQveg.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\BuffaloBurgerwithOkaCheese.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\DryGlazedPorkTenderloin.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\GrilledPorkChopsandZestySauceViergewithFeta.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\KoreanBBQShortRibs.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\StLouisStylePorkRibs.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\SurfNTurfKebabs.jpg" />
+  </ItemGroup>
+</Project>
