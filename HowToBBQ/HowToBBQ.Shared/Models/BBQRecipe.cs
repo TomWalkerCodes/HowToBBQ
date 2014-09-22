@@ -6,6 +6,7 @@ namespace HowToBBQ.Models
 {
     public class BBQRecipe
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string ShortDesc { get; set; }
         public string Ingredients { get; set; }
@@ -15,4 +16,5 @@ namespace HowToBBQ.Models
         public int Serves { get; set; }
         public string ImageSource { get; set; }
     }
+
 }

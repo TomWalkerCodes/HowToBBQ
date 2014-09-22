@@ -3,12 +3,46 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HowToBBQ"
+    xmlns:vm="using:HowToBBQ.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Page.DataContext>
+        <vm:RecipesViewModel />
+    </Page.DataContext>
 
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Label="Add" Icon="Add" Click="Add_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="HowToBBQ" FontSize="36" Margin="10,5,0,5" />
+        <ListView Grid.Row="1" ItemsSource="{Binding Recipes}" Margin="0,0,-3.0517578125E-05,0">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Width" Value="300"/>
+                    <Setter Property="Height" Value="150"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Tapped="Item_Tapped">
+                        <Image Source="{Binding ImageSource}"/>
+                        <Border Background="#99000000" VerticalAlignment="Bottom">
+                            <TextBlock Grid.Column="1" Text="{Binding Name}"
+                                   FontSize="20" Margin="10" VerticalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

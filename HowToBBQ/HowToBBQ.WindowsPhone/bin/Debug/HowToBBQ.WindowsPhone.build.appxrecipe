@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>FREYA</Machine>
+    <WindowsUser>Tom</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>3b571951-75a8-4357-9c23-e82742eaa5c0</PackageIdentityName>
+    <IntermediateOutputPath>E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\bin\Debug\HowToBBQ.WindowsPhone.exe">
+      <PackagePath>HowToBBQ.WindowsPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\camera_load.png">
+      <PackagePath>Images\camera_load.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\StoreManifest.xml">
+      <PackagePath>StoreManifest.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\BBQPulledPorkSandwiches.jpg">
+      <PackagePath>Images\BBQPulledPorkSandwiches.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\BBQTurkeyDrumstickswithChipotleGlaze.jpg">
+      <PackagePath>Images\BBQTurkeyDrumstickswithChipotleGlaze.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\BBQveg.jpg">
+      <PackagePath>Images\BBQveg.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\BuffaloBurgerwithOkaCheese.jpg">
+      <PackagePath>Images\BuffaloBurgerwithOkaCheese.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\DryGlazedPorkTenderloin.jpg">
+      <PackagePath>Images\DryGlazedPorkTenderloin.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\GrilledPorkChopsandZestySauceViergewithFeta.jpg">
+      <PackagePath>Images\GrilledPorkChopsandZestySauceViergewithFeta.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\KoreanBBQShortRibs.jpg">
+      <PackagePath>Images\KoreanBBQShortRibs.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\StLouisStylePorkRibs.jpg">
+      <PackagePath>Images\StLouisStylePorkRibs.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.Shared\Images\SurfNTurfKebabs.jpg">
+      <PackagePath>Images\SurfNTurfKebabs.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\bin\Debug\RecipePage.xbf">
+      <PackagePath>RecipePage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\bin\Debug\HowToBBQ.WindowsPhone.xr.xml">
+      <PackagePath>HowToBBQ.WindowsPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\tomwalkercodes\HowToBBQ\HowToBBQ\HowToBBQ.WindowsPhone\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -15,18 +15,24 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\BBQReciepe.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BBQReceipesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BBQRecipe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Observable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RecipeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Images\BBQPulledPorkSandwiches.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\BBQTurkeyDrumstickswithChipotleGlaze.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\BBQveg.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\BuffaloBurgerwithOkaCheese.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\camera_load.png" />
     <Content Include="$(MSBuildThisFileDirectory)Images\DryGlazedPorkTenderloin.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\GrilledPorkChopsandZestySauceViergewithFeta.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\KoreanBBQShortRibs.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\StLouisStylePorkRibs.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Images\SurfNTurfKebabs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Design\" />
   </ItemGroup>
 </Project>

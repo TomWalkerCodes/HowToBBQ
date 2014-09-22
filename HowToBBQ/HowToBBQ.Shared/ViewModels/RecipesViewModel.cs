@@ -3,20 +3,39 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
+using Windows.UI.Xaml.Data;
 
 namespace HowToBBQ.ViewModels
 {
-    public class BBQRecipesViewModel
+    public class RecipesViewModel
     {
-        public ObservableCollection<BBQRecipe> Recipes { get; set; }
+
+
+        public ObservableCollection<BBQRecipe> Recipes  { get; set; }
 
         private string prefix = @"Images/";
 
-        public BBQRecipesViewModel()
+        public RecipesViewModel()
         {
-            Recipes = new ObservableCollection<BBQRecipe>();
 
-            Recipes.Add(new BBQRecipe
+            if (!App.IsDataLoaded)
+            {
+                LoadData();
+                Recipes = App.dbRecipes;
+            }
+        }
+
+  
+        /// <summary>
+        /// Creates and adds a few ItemViewModel objects into the Items collection.
+        /// </summary>
+        private void LoadData()
+        {
+
+            ObservableCollection<BBQRecipe> _returnRecipes = new ObservableCollection<BBQRecipe>();
+
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "Dry Glazed Pork Tenderloin",
                 ShortDesc = "",
@@ -40,7 +59,7 @@ namespace HowToBBQ.ViewModels
                 ImageSource = prefix + "DryGlazedPorkTenderloin.jpg"
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "Grilled Pork Chops and Zesty Sauce Vierge with Feta",
                 ShortDesc = "",
@@ -68,7 +87,7 @@ namespace HowToBBQ.ViewModels
 
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "St. Louis Style Pork Ribs",
                 ShortDesc = "Bad to the bone gets a whole new meaning with our fabulous, fall-off-the-bone ribs, all wrapped up in a fool-proof recipe package.",
@@ -93,7 +112,7 @@ namespace HowToBBQ.ViewModels
                 ImageSource = prefix + "StLouisStylePorkRibs.jpg"
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "How to Cook Perfect BBQ Vegetables",
                 ShortDesc = "With only five vegetables needed, and three simple pantry items, this will become your go-to recipe for the entire warm-weather season!",
@@ -115,7 +134,7 @@ namespace HowToBBQ.ViewModels
                 ImageSource = prefix + "BBQveg.jpg"
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "Buffalo Burger with Oka Cheese",
                 ShortDesc = "",
@@ -139,7 +158,7 @@ namespace HowToBBQ.ViewModels
                 ImageSource = prefix + "BuffaloBurgerwithOkaCheese.jpg"
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "Sirloin Beef Barbequed Kabobs",
                 ShortDesc = "",
@@ -167,7 +186,7 @@ namespace HowToBBQ.ViewModels
                 ImageSource = prefix + "SurfNTurfKebabs.jpg"
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "Shrimp and Scallop Kabobs",
                 ShortDesc = "",
@@ -194,7 +213,7 @@ namespace HowToBBQ.ViewModels
                 ImageSource = prefix + "SurfNTurfKebabs.jpg"
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "BBQ'd Pulled Pork Sandwiches",
                 ShortDesc = "",
@@ -212,7 +231,7 @@ namespace HowToBBQ.ViewModels
                 ImageSource = prefix + "BBQPulledPorkSandwiches.jpg"
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "BBQ Turkey Drumsticks with Chipotle Glaze",
                 ShortDesc = "Try Chuck Hughes' delicious slow-roasted and basted BBQ turkey drumsticks, glazed with chipotle sauce.",
@@ -247,7 +266,7 @@ namespace HowToBBQ.ViewModels
                 ImageSource = prefix + "BBQTurkeyDrumstickswithChipotleGlaze.jpg"
             });
 
-            Recipes.Add(new BBQRecipe
+            _returnRecipes.Add(new BBQRecipe
             {
                 Name = "Korean BBQ Short Ribs",
                 ShortDesc = "Fire up the grill for these delectable Korean-style short ribs.",
@@ -268,6 +287,11 @@ namespace HowToBBQ.ViewModels
                 Serves = 4,
                 ImageSource = prefix + "KoreanBBQShortRibs.jpg"
             });
+
+            App.IsDataLoaded = true;
+
+            App.dbRecipes = _returnRecipes;
+
         }
 
     }

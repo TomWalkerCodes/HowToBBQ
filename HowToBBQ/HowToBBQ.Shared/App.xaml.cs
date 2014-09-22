@@ -1,5 +1,7 @@
-﻿using System;
+﻿using HowToBBQ.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -7,6 +9,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,12 +26,16 @@ namespace HowToBBQ
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
+    /// 
     public sealed partial class App : Application
     {
+        public static ObservableCollection<BBQRecipe> dbRecipes = null;
+        public static bool IsDataLoaded = false;
+     
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
-
+      
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -37,6 +44,12 @@ namespace HowToBBQ
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+            this.DebugSettings.BindingFailed += DebugSettings_BindingFailed;
+        }
+
+        void DebugSettings_BindingFailed(object sender, BindingFailedEventArgs e)
+        {
+            new MessageDialog(e.Message).ShowAsync();
         }
 
         /// <summary>
@@ -72,6 +85,9 @@ namespace HowToBBQ
                 }
 
                 // Place the frame in the current Window
+
+                dbRecipes = new ObservableCollection<BBQRecipe>();
+
                 Window.Current.Content = rootFrame;
             }
 
@@ -101,9 +117,23 @@ namespace HowToBBQ
                 }
             }
 
+
             // Ensure the current window is active
             Window.Current.Activate();
         }
+
+#if WINDOWS_PHONE_APP
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            var root = Window.Current.Content as Frame;
+            var RecipePage = root.Content as RecipePage;
+            if (RecipePage != null && args is FileOpenPickerContinuationEventArgs)
+            {
+                RecipePage.ContinueFileOpenPicker(args as FileOpenPickerContinuationEventArgs);
+            }
+        }
+#endif
+
 
 #if WINDOWS_PHONE_APP
         /// <summary>
